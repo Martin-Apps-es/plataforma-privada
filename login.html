@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTC-8">
+    <title>Inicia Sesión</title>
+    <style>
+      body {
+        background-color: #0a192f;
+        color: #e5f0fe;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+      }
+
+      .container {
+        background-color: #112240;
+        display: inline-block;
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-buttom: 20px;
+        padding-left: 20px;
+        border-radius: 20px;
+      }
+
+      input  {
+        background-color: #f0f0f0;
+        border: none;
+        font-size: 16px;
+        width: 300px;
+        height: 30px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+      }
+
+      .btn {
+        background-color: #64ffda;
+        border: none;
+        color: #112240;
+        font-size: 20px;
+        padding: 5px;
+        border-radius: 10px;
+        width: 300px;
+      }
+
+      a {
+        color: #e5f0fe;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Accede a tu cuenta</h1>
+      <form>
+        <input id="username" name="username" placeholder="Usuario" type="text">
+        <br>
+        <input id="password" name="password" placeholder="Clave" type="password">
+        <br>
+        <button type="submit" class="btn">Accede</button>
+        <br>
+        <p>Si no tienes credeciales pulsa <a href="credenciales.html">aquí.</a></p>
+      </form>
+    </div>
+    <script>
+      document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Evita el envío del formulario
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      if (username === "yo" && password === "soloyo") {
+          window.location.href = "290110.html"; // Redirige a hola.html
+      } else if (username === "adios123" && password === "123adios") {
+          window.location.href = "adios.html"; // Redirige a adios.html
+      } else {
+          alert("Usuario o clave incorrectos. Por favor, inténtalo de nuevo."); // Muestra un mensaje de error
+      }
+      });
+    </script>
+  </body>
+</html>
